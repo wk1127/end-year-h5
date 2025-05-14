@@ -1,0 +1,120 @@
+.loading-bg {
+  background: #F1F9FF;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loading-content {
+  position: absolute;
+  top:  43%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.loading-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/01.png') center no-repeat;
+  animation: people 1s infinite;
+}
+@keyframes people {
+  0% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/01.png') center no-repeat;
+    background-size: 100%;
+  }
+  16.66% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/02.png') center no-repeat;
+    background-size: 100%;
+  }
+  33.32% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/03.png') center no-repeat;
+    background-size: 100%;
+  }
+  49.98% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/04.png') center no-repeat;
+    background-size: 100%;
+  }
+  66.64% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/05.png') center no-repeat;
+    background-size: 100%;
+  }
+  83.3% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/06.png') center no-repeat;
+    background-size: 100%;
+  }
+  100% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/loading/01.png') center no-repeat;
+    background-size: 100%;
+  }
+}
+.loading-text {
+  text-align: center;
+  color: #2C00C6;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+}
+.msg-box {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+}
+.msg-box img {
+  width: 100%;
+}
+.count {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #2C00C6;
+}
+.dotting { display: inline-block; width: 10px; min-height: 2px;
+      padding-right: 2px;
+      border-left: 2px solid currentColor; border-right: 2px solid currentColor;
+      background-color: currentColor; background-clip: content-box;
+      box-sizing: border-box;
+      -webkit-animation: dot 1.5s infinite step-start both;
+      animation: dot 1.5s infinite step-start both;
+  }
+  .dotting:before { content: '...'; } /* IE8 */
+  .dotting::before { content: ''; }
+  :root .dotting { margin-left: 2px; padding-left: 2px; } /* IE9+ */
+
+  @-o-keyframes dot {
+      25% { border-color: transparent; background-color: transparent; }
+      50% { border-right-color: transparent; background-color: transparent; }
+      75% { border-right-color: transparent; }
+  }
+  @-ms-keyframes dot {
+      25% { border-color: transparent; background-color: transparent; }
+      50% { border-right-color: transparent; background-color: transparent; }
+      75% { border-right-color: transparent; }
+  }
+  @-moz-keyframes dot {
+      25% { border-color: transparent; background-color: transparent; }
+      50% { border-right-color: transparent; background-color: transparent; }
+      75% { border-right-color: transparent; }
+  }
+  @-webkit-keyframes dot {
+      25% { border-color: transparent; background-color: transparent; }
+      50% { border-right-color: transparent; background-color: transparent; }
+      75% { border-right-color: transparent; }
+  }
+  @keyframes dot {
+      25% { border-color: transparent; background-color: transparent; }
+      50% { border-right-color: transparent; background-color: transparent; }
+      75% { border-right-color: transparent; }
+  }

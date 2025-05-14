@@ -1,0 +1,141 @@
+.loading-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: 100% 100%;
+}
+
+.loading-content {
+  margin-top: 34vh;
+
+  .img {
+    width: 192px;
+  }
+}
+.loading-text{
+  text-align: center;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  color: #F37804;
+}
+
+.count {
+  margin-top:15px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #F37804;
+}
+
+.dotting {
+  display: inline-block;
+  width: 10px;
+  min-height: 2px;
+  padding-right: 2px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  box-sizing: border-box;
+  -webkit-animation: dot 1.5s infinite step-start both;
+  animation: dot 1.5s infinite step-start both;
+}
+
+.dotting:before {
+  content: '...';
+}
+
+/* IE8 */
+.dotting::before {
+  content: '';
+}
+
+:root .dotting {
+  margin-left: 2px;
+  padding-left: 2px;
+}
+
+/* IE9+ */
+
+@-o-keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+
+  75% {
+    border-right-color: transparent;
+  }
+}
+
+@-ms-keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+
+  75% {
+    border-right-color: transparent;
+  }
+}
+
+@-moz-keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+
+  75% {
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+
+  75% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+
+  75% {
+    border-right-color: transparent;
+  }
+}

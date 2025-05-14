@@ -1,0 +1,295 @@
+.container {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding-top: 104px;
+
+  p {
+    margin: 0 0 0 88px;
+    color: #532B1F;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .p1 {
+    opacity: 0;
+    animation: pAnimation 1s ease;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+  }
+
+  .p2 {
+    opacity: 0;
+    animation: pAnimation 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+  }
+  
+  .p3 {
+    opacity: 0;
+    animation: pAnimation 1s ease 1.7s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+  }
+
+  .p4 {
+    opacity: 0;
+    animation: pAnimation 1s ease 2.3s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+  }
+
+  .date {
+    color: #F66F27;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 18px 0 12px 88px;
+    opacity: 0;
+    animation: pAnimation 1s ease 1s;
+    animation-fill-mode: forwards;
+    transform: translate(0, -100%);
+  }
+
+  .set-out {
+    position: absolute;
+    left: 154px;
+    bottom: calc(4.95vh + 66px);
+    // width: 126px;
+    // height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: setOutShow 2s ease 0.1s;
+    animation-fill-mode: forwards;
+  }
+
+  .set-out-hide {
+    animation: setOutHide 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .dot {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+      transform: scale(2);
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn1 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .bird1 {
+    position: absolute;
+    left: 32px;
+    top: 212px;
+    width: 46px;
+    height: 35px;
+    animation: bird1Animation 10s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .bird2 {
+    position: absolute;
+    left: 54px;
+    top: 312px;
+    width: 29px;
+    height: 22px;
+    animation: bird2Animation 12s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .bird3 {
+    position: absolute;
+    left: 220px;
+    top: 268px;
+    width: 29px;
+    height: 22px;
+    animation: bird3Animation 13s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .train {
+    position: absolute;
+    right: 24px;
+    bottom: 4.95vh;
+    width: 2244px;
+    height: auto;
+    transform: translateX(-400px);
+    animation: trainEnter 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .train-leave {
+    animation: trainLeave 4s cubic-bezier(.67,.13,.94,.44);
+    animation-fill-mode: forwards;
+  }
+
+  .card {
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    width: 170px;
+    height: auto;
+    animation: cardAnimation 0.5s ease 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+  }
+
+  .plant {
+    position: absolute;
+    left: -8px;
+    bottom: -24px;
+    width: 440px;
+    height: auto;
+  }
+
+  @keyframes cardAnimation {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes pAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, -100%);
+    }
+  }
+
+  @keyframes birdAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(250%, -200%);
+    }
+  }
+  @keyframes bird1Animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(400px, -250px) scale(0.5);
+    }
+  }
+  @keyframes bird2Animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(350px, -230px) scale(0.7);
+    }
+  }
+  @keyframes bird3Animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(300px, -200px) scale(0.8);
+    }
+  }
+  @keyframes trainEnter {
+    0% {
+      transform: translateX(-400px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes trainLeave {
+    0% {
+      transform: translateX(0);
+    }
+     100% {
+      transform: translate(2880px);
+    }
+  }
+  @keyframes warn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+  }
+  @keyframes warn1 {
+    0% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(3.7);
+      opacity: 0.2;
+    }
+  }
+  @keyframes setOutShow {
+    0% {
+      opacity: 0;
+      z-index: 1;
+    }
+    100% {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  @keyframes setOutHide {
+    0% {
+      z-index: 2;
+      opacity: 1;
+    }
+    100% {
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+
+}

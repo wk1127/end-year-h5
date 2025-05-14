@@ -1,0 +1,246 @@
+.container {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 104px;
+
+
+  .set-out {
+    position: absolute;
+    left: 408xx;
+    bottom: 644xx;
+    padding: 60xx 10xx 10xx;
+    color: #C7613E;
+    font-size: 32xx;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dot {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 40xx;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+      transform: scale(2);
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn1 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .letter {
+    position: absolute;
+    left: 90xx;
+    bottom: -40xx;
+    width: 561xx;
+    height: 461xx;
+    background-size: 100% 100%;
+    animation: letterAnimation 2s ease;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+
+    .heart {
+      position: absolute;
+      left: 249xx;
+      top: 121xx;
+      width: 154xx;
+      height: auto;
+      animation: heartAnimation 1s ease 2.5s infinite;
+    }
+  }
+  
+  .letter-leave {
+    animation: letterLeaveAnimation 2s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 69, 75, 0.36);
+    opacity: 0;
+    z-index: 2;
+    animation: maskAnimation 0.5s;
+    animation-fill-mode: forwards;
+
+    .letter-box {
+      box-sizing: border-box;
+      padding: 50xx 87xx 0 91xx;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 628xx;
+      height: 804xx;
+      color: #532B1F;
+      font-size: 30xx;
+      opacity: 0;
+      transform: scale(0.2);
+      background-size: 100% 100%;
+      animation: letterBoxAnimation 2s;
+      animation-fill-mode: forwards;
+
+      .name {
+        font-weight: bold;
+        margin-bottom: 10xx;
+      }
+      .content {
+        box-sizing: border-box;
+        max-height: 606xx;
+        overflow-y: scroll;
+        line-height: 54xx;
+        font-weight: 400;
+        padding-bottom: 40xx;
+      }
+      .mask1 {
+        position: absolute;
+        left: 80xx;
+        bottom: 80xx;
+        width: 461xx;
+        height: auto;
+      }
+      .footer {
+        margin-top: 16xx;
+        font-weight: 400;
+        text-align: right;
+      }
+    }
+
+    .bt {
+      position: absolute;
+      left: 201xx;
+      bottom: 62xx;
+      width: 359xx;
+      height: 153xx;
+      background-size: 100% 100%;
+      color: #FFFFFF;
+      font-size: 38xx;
+      text-align: center;
+      line-height: 153xx;
+      opacity: 0;
+      animation: btAnimation 2s ease 1s;
+      animation-fill-mode: forwards;
+    }
+    
+  }
+
+  @keyframes letterAnimation {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes letterLeaveAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+  @keyframes heartAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+  @keyframes warn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+  }
+  @keyframes warn1 {
+    0% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(3.7);
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes maskAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes letterBoxAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes btAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+}

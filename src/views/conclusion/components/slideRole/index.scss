@@ -1,0 +1,108 @@
+img{
+  width: 100%;
+  display: block;
+}
+.w100{
+  width: 100%;
+}
+.page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 4vw;
+  color: #ffffff;
+}
+// 绝对定位
+.section-after,
+.section-ball,
+.section-text{
+  position: absolute;
+}
+.section-after{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+// 后背景
+.section-after{
+  z-index: 10;
+}
+// 女孩
+.section-ball{
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  .ball{
+    width: 100vw;
+  }
+  .girl-wrap{
+    position: absolute;
+    top: -10vh;
+    right: 11vw;
+    // max-width: 159px;
+    .girl{
+      position: relative;
+      width: 42.4vw;
+      z-index: 32;
+    }
+    .girl-shadow{
+      position: absolute;
+      top: 59%;
+      left: 0;
+      width: 66vw;
+      z-index: 31;
+    }
+  }
+}
+
+// 文字
+.section-text{
+  z-index: 40;
+  top: 10.65vh;
+  left: 23vw;
+  text-align: left;
+  line-height: 7.7vw;
+}
+
+// 小女孩阴影
+@-webkit-keyframes animate__girl_shadow {
+  0% {
+    opacity: 0;
+    width: 50vw;
+  }
+  30% {
+    opacity: 1;
+    width: 50vw;
+  }
+  100%{
+    opacity: 1;
+    width: 66vw;
+  }
+  // from {
+  //   opacity: 0;
+  //   width: 36vw;
+  // }
+
+  // to {
+  //   opacity: 1;
+  //   width: 55vw;
+  // }
+}
+@keyframes animate__girl_shadow {
+  0% {
+    opacity: 0;
+    width: 50vw;
+  }
+  30% {
+    opacity: 1;
+    width: 50vw;
+  }
+  100%{
+    opacity: 1;
+    width: 66vw;
+  }
+}
+.animate__girl_shadow {
+  -webkit-animation-name: animate__girl_shadow;
+  animation-name: animate__girl_shadow;
+}

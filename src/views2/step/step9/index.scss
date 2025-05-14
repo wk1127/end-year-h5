@@ -1,0 +1,301 @@
+.container {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 104px;
+
+
+  .set-out {
+    position: absolute;
+    left: 20xx;
+    bottom: 143xx;
+    width: 126px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    animation: setOutShow 2s ease 4s;
+    animation-fill-mode: forwards;
+  }
+
+  .set-out-hide {
+    animation: setOutHide 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .dot {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+      transform: scale(2);
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn1 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .img-list {
+    img {
+      position: absolute;
+      opacity: 0;
+    }
+    .img1 {
+      width: 428xx;
+      height: auto;
+      left: 200xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 1s infinite;
+    }
+    .img2 {
+      width: 649xx;
+      height: auto;
+      left: 150xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 2s infinite;
+    }
+    .img3 {
+      width: 414xx;
+      height: auto;
+      left: 170xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 3s infinite;
+    }
+    .img4 {
+      width: 512xx;
+      height: auto;
+      left: 240xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 4s infinite;
+    }
+    .img5 {
+      width: 428xx;
+      height: auto;
+      left: 200xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 5s infinite;
+    }
+    .img6 {
+      width: 649xx;
+      height: auto;
+      left: 160xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 6s infinite;
+    }
+    .img7 {
+      width: 414xx;
+      height: auto;
+      left: 220xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 7s infinite;
+    }
+    .img8 {
+      width: 512xx;
+      height: auto;
+      left: 190xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 8s infinite;
+    }
+    .img9 {
+      width: 428xx;
+      height: auto;
+      left: 200xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 9s infinite;
+    }
+    .img10 {
+      width: 649xx;
+      height: auto;
+      left: 140xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 10s infinite;
+    }
+
+    .img11 {
+      width: 649xx;
+      height: auto;
+      left: 170xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 11s infinite;
+    }
+    .img12 {
+      width: 512xx;
+      height: auto;
+      left: 210xx;
+      bottom: 500xx;
+      transform: scale(0);
+      animation: img1Animation 12s linear 12s infinite;
+    }
+  }
+
+  .train {
+    position: absolute;
+    right: 90vw;
+    bottom: -390xx;
+    width: 4487xx;
+    height: auto;
+    animation: trainEnter 1s ease-out 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .train-leave {
+    animation: trainLeave 4s cubic-bezier(.67,.13,.94,.44);
+    animation-fill-mode: forwards;
+  }
+
+  .card {
+    position: absolute;
+    right: 13xx;
+    bottom: -100xx;
+    width: 238xx;
+    height: auto;
+    animation: cardAnimation 0.5s ease 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+  }
+
+  .plant {
+    position: absolute;
+    right: -67xx;
+    bottom: -31xx;
+    width: 186xx;
+    height: auto;
+  }
+
+  @keyframes cardAnimation {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes trainEnter {
+    0% {
+      transform: translate(0, 0) rotate(-10.54deg);
+    }
+    100% {
+      transform: translate(380xx, -70.7xx) rotate(-10.54deg);
+    }
+  }
+  @keyframes trainLeave {
+    0% {
+      transform: translate(380xx, -70.7xx) rotate(-10.54deg);
+    }
+    100% {
+      transform: translate(5200xx, -968xx) rotate(-10.54deg);
+    }
+  }
+  @keyframes warn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+  }
+  @keyframes warn1 {
+    0% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(3.7);
+      opacity: 0.2;
+    }
+  }
+  @keyframes setOutShow {
+    0% {
+      opacity: 0;
+      z-index: 1;
+    }
+    100% {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  @keyframes setOutHide {
+    0% {
+      z-index: 2;
+      opacity: 1;
+    }
+    100% {
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes img1Animation {
+    0% {
+      opacity: 0;
+      transform: scale(0) translate(0, 0);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(0.9) translate(-100xx, -200xx);
+    }
+    30% {
+      opacity: 1;
+      transform: scale(0.9) translate(-100xx, -400xx);
+    }
+    60% {
+      opacity: 0;
+      transform: scale(0.9) translate(-100xx, -1000xx);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9) translate(-100xx, -1800xx);
+    }
+  }
+
+}

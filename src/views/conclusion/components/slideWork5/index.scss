@@ -1,0 +1,154 @@
+.page{
+  color: #000000;
+  background-size: cover;
+}
+.section-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-0.png') no-repeat center;
+  background-size: cover;
+  transition: all .3s;
+  z-index: 10;
+}
+.color-default{
+  color: #B376F3;
+}
+// 绝对定位
+.section-text{
+  position: absolute;
+}
+.section-after,
+.section-before{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+// TODO 文字部分跟着这个来
+// 文字
+.section-text{
+  width: 87.6vw;
+  max-height: 63.65vh;
+  z-index: 30;
+  top: 13vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: left;
+  line-height: 7.7vw;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/text-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 7% 18%;
+  li{
+    span{
+      display: inline-block;
+    }
+    .name{
+      width: 21.7vw;
+    }
+  }
+  .text{
+    position: relative;
+    height: 86%;
+    max-height: 50.65vh;
+    overflow: auto;
+    z-index: 32;
+  }
+}
+
+// 文字
+@-webkit-keyframes text_zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+    transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+    transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes text_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+    transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+    transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+.text__animate__zoomIn {
+  -webkit-animation-name: text_zoomIn;
+  animation-name: text_zoomIn;
+}
+
+/* 背景 */
+@-webkit-keyframes bg_animate {
+  0% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-0.png') no-repeat center;
+    background-size: cover;
+  }
+  25% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-1.png') no-repeat center;
+    background-size: cover;
+  }
+  50% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-2.png') no-repeat center;
+    background-size: cover;
+  }
+  75% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-3.png') no-repeat center;
+    background-size: cover;
+  }
+  100% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-4.png') no-repeat center;
+    background-size: cover;
+  }
+}
+@keyframes bg_animate {
+  0% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-0.png') no-repeat center;
+    background-size: cover;
+  }
+  25% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-1.png') no-repeat center;
+    background-size: cover;
+  }
+  50% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-2.png') no-repeat center;
+    background-size: cover;
+  }
+  75% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-3.png') no-repeat center;
+    background-size: cover;
+  }
+  100% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork5/bg-4.png') no-repeat center;
+    background-size: cover;
+  }
+}
+.bg__animate {
+  -webkit-animation-name: bg_animate;
+  animation-name: bg_animate;
+  animation-fill-mode: forwards;
+}

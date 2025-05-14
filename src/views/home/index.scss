@@ -1,0 +1,407 @@
+.wh100 { 
+  width: 100%;
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.translateX50 {
+  transform: translateX(-50%);
+}
+
+.home-global {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: #000000;
+}
+
+.home-container-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  animation: MaskSetting 1s 2.4s;
+  animation-fill-mode: forwards;
+}
+
+.home-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  .home-bg {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/theme/1yunbg.png') center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 10;
+  }
+  .home-sky {
+    top: 0;
+    left: 50%;
+    width: 133.33%;
+    z-index: 11;
+    animation: SykMove 4s;
+  }
+  .home-housebg {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/theme/3housebg.png') center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 12;
+  }
+
+  .leftPeopleIn {
+    animation: leftPeopleIn 2s;
+    animation-fill-mode: forwards; 
+  }
+  .leftPeopleOut {
+    opacity: 1 !important;
+    animation: leftPeopleOut 1s linear;
+    animation-fill-mode: forwards; 
+  }
+  .rightPeopleIn {
+    animation: rightPeopleIn 2s;
+    animation-fill-mode: forwards; 
+  }
+  .rightPeopleOut {
+    opacity: 1 !important;
+    animation: rightPeopleOut 1s linear;
+    animation-fill-mode: forwards; 
+  }
+  .home-peopleone-in {
+    >img {
+      animation: centerPeopleIn 2s 0s;
+    }
+  }
+  .home-peopleone-out {
+    >img {
+      opacity: 1 !important;
+      animation: rightPeopleOut 1s linear;
+    }
+  }
+  .home-peopleone {
+    bottom: 0;
+    left: 55%;
+    height: 22.41%;
+    z-index: 13;
+    >img {
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+  }
+  .home-peopletwo {
+    bottom: 0;
+    right: -45%;
+    height: 96.98%;
+    opacity: 0;
+    z-index: 14;
+  }
+  .home-peopletwo-in {
+    animation-delay: .3s;
+  }
+  // .home-peopletwo-out {
+  //   // ...
+  // }
+  .home-peoplethree {
+    bottom: 0;
+    left: -113%;
+    height: 93.31%;
+    opacity: 0;
+    z-index: 15;
+  }
+  .home-peoplethree-in {
+    animation-delay: .5s;
+  }
+  // .home-peoplethree-out {
+  //   // ...
+  // }
+  .home-peoplefour {
+    bottom: 0;
+    right: 0;
+    width: 29.2%;
+    height: 22.41%;
+    opacity: 0;
+    z-index: 16;
+  }
+  .home-peoplefour-in {
+    animation-delay: .7s;
+  }
+  // .home-peoplefour-out {
+  //   // ...
+  // }
+  .home-peoplefive {
+    bottom: 0;
+    left: 0;
+    width: 16.8%;
+    height: 17.99%;
+    opacity: 0;
+    z-index: 17;
+  }
+  .home-peoplefive-in {
+    animation-delay: .8s;
+  }
+  // .home-peoplefive-out {
+  //   // ..
+  // }
+  .home-peoplemove {
+    bottom: 29%;
+    left: 57.7%;
+    height: 4.27%;
+    z-index: 18;
+    animation: SmallPeopleMove 1.5s 1.2s linear;
+    animation-fill-mode: forwards;
+  }
+  .home-theme-in {
+    animation: ThemeIn 1.5s 1.2s linear;
+  }
+  .home-theme-out {
+    animation: ThemeOut .3s linear;
+  }
+  .home-theme {
+    top: 15%;
+    right: 5.4%;
+    width: 23.73%;
+    opacity: 0;
+    z-index: 19;
+    animation-fill-mode: forwards;
+  }
+  .home-hand {
+    bottom: 29%;
+    left: 47.7%;
+    width: 6%;
+    opacity: 0;
+    z-index: 19;
+    animation: HandIn .8s 2.8s linear infinite;
+    transform-origin: center;
+
+  }
+  .home-click {
+    top: -60%;
+    left: -38%;
+    width: 128.88%;
+    opacity: 0;
+    z-index: 19;
+    animation: ClickIn .8s 3s linear infinite;
+  }
+  .home-prompt {
+    bottom: 21%;
+    left: 40.7%;
+    z-index: 19;
+  }
+}
+
+.housebg-ani-big {
+  animation: HousebgBig 1.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.home-container--showin {
+  animation: showIn 1s;
+}
+
+.home-container--showout {
+  animation: showOut 1.5s 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes MaskSetting {
+  0% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  99% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  100% {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes SykMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes centerPeopleIn {
+  0% {
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes centerPeopleOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes rightPeopleIn {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rightPeopleOut {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(120%, 120%);
+  }
+}
+
+@keyframes leftPeopleIn {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes leftPeopleOut {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-120%, 120%);
+  }
+}
+
+@keyframes SmallPeopleMove {
+  0% {
+    transform: translateX(0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-350%);
+  }
+}
+
+@keyframes ThemeIn {
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ThemeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes HandIn {
+  0% {
+    opacity: 1;
+    width: 6%;
+  }
+  50% {
+    opacity: 1;
+    width: 7.8%;
+  }
+  100% {
+    opacity: 1;
+    width: 6%;
+  }
+}
+
+@keyframes ClickIn {
+  0% {
+    opacity: 0;
+    width: 128.88%;
+  }
+  50% {
+    opacity: 0;
+    width: 128.88%;
+  }
+  100% {
+    opacity: 1;
+    width: 138.88%;
+  }
+}
+
+@keyframes HousebgBig {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 200% 200%;
+    background-position: 0 5%;
+  }
+}

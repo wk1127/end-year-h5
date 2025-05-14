@@ -1,0 +1,445 @@
+.page{
+  color: #000000;
+  background-size: cover;
+}
+.section-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-0.png') no-repeat center;
+  background-size: cover;
+  transition: all .3s;
+  z-index: 10;
+}
+.color-default{
+  color: #B376F3!important;
+  font-weight: bolder;
+}
+// 绝对定位
+.section-tree,
+.section-letter,
+.section-text{
+  position: absolute;
+}
+// TODO 文字部分跟着这个来
+// 文字
+.section-text{
+  width: 87.6vw;
+  max-height: 63.65vh;
+  z-index: 30;
+  top: 17vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: left;
+  line-height: 7.7vw;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/text-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 7% 14%;
+  .text{
+    position: relative;
+    height: 86%;
+    max-height: 50.65vh;
+    overflow: auto;
+    z-index: 32;
+  }
+  .fish{
+    width: 1.67rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.section-tree{
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  .tree{
+    width: 100vw;
+  }
+}
+.section-letter{
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  .letter{
+    width: 76.7vw;
+  }
+  .heart{
+    width: 17vw;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    z-index: 31;
+    animation-iteration-count: infinite;
+    animation-direction:reverse;
+    .look{
+      width: 100%;
+      position: absolute;
+      top: 39%;
+      left: 0;
+      text-align: center;
+      font-size: 2.9vw;
+      color: #ffffff;
+    }
+  }
+}
+
+// 信封 开
+.section-details{
+  position: absolute;
+  z-index: 40;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  .letter-after{
+    position: absolute;
+    width: 94.5vw;
+    z-index: 41;
+    top: -47%;
+  }
+  .letter-before{
+    position: relative;
+    width: 95vw;
+    z-index: 43;
+  }
+  .details{
+    position: absolute;
+    bottom: 12vh;
+    left: 50%;
+    width: 88.3vw;
+    height: 12vh;
+    z-index: 42;
+    transform: translateX(-50%);
+    text-align: left;
+    line-height: 7.7vw;
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/details-bg.png') no-repeat center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding: 7% 12%;
+    .text{
+      position: relative;
+      height: 86%;
+      max-height: 50.65vh;
+      overflow: auto;
+      z-index: 32;
+    }
+  }
+  .signature{
+    position: absolute;
+    bottom: 30vw;
+    right: 10vw;
+    width: 27vw;
+    z-index: 44;
+  }
+}
+@-webkit-keyframes letter_fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform:translate(-50%, 100%);
+    transform:translate(-50%, 100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes letter_fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform:translate(-50%, 100%);
+    transform:translate(-50%, 100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+.letter__animate__fadeInUp {
+  -webkit-animation-name: letter_fadeInUp;
+  animation-name: letter_fadeInUp;
+}
+
+// 文字
+@-webkit-keyframes text_zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+    transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+    transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes text_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+    transform: translate(-50%, 0) scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+    transform: translate(-50%, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+.text__animate__zoomIn {
+  -webkit-animation-name: text_zoomIn;
+  animation-name: text_zoomIn;
+}
+// 文字
+@-webkit-keyframes text_zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(.3);
+    transform: translate(-50%, 0) scale(.3);
+  }
+}
+@keyframes text_zoomOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(.3);
+    transform: translate(-50%, 0) scale(.3);
+  }
+}
+.text__animate__zoomOut {
+  -webkit-animation-name: text_zoomOut;
+  animation-name: text_zoomOut;
+  animation-duration: 1s;
+  animation-delay: 0s!important;
+  -webkit-animation-delay: 0s!important;
+  animation-fill-mode: forwards;
+}
+
+/* 背景 */
+@-webkit-keyframes bg_animate {
+  0% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-0.png') no-repeat center;
+    background-size: cover;
+  }
+  50% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-1.png') no-repeat center;
+    background-size: cover;
+  }
+  100% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-2.png') no-repeat center;
+    background-size: cover;
+  }
+}
+@keyframes bg_animate {
+  0% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-0.png') no-repeat center;
+    background-size: cover;
+  }
+  50% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-1.png') no-repeat center;
+    background-size: cover;
+  }
+  100% {
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLetter1/bg-2.png') no-repeat center;
+    background-size: cover;
+  }
+}
+.bg__animate {
+  -webkit-animation-name: bg_animate;
+  animation-name: bg_animate;
+  animation-fill-mode: forwards;
+}
+
+// 心
+@-webkit-keyframes heart_heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  20% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes heart_heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  20% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.heart__animate__heartBeat {
+  -webkit-animation-name: heart_heartBeat;
+  animation-name: heart_heartBeat;
+  -webkit-animation-duration: calc(1s * 1.3);
+  animation-duration: calc(1s * 1.3);
+  -webkit-animation-duration: calc(var(--animate-duration) * 1.3);
+  animation-duration: calc(var(--animate-duration) * 1.3);
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+// 信封消失
+@-webkit-keyframes letter_zoomOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(2);
+    transform: translate(-50%, 0) scale(2);
+  }
+}
+@keyframes letter_zoomOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(2);
+    transform: translate(-50%, 0) scale(2);
+  }
+}
+.letter__animate__zoomOut {
+  -webkit-animation-name: letter_zoomOut;
+  animation-name: letter_zoomOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s!important;
+  -webkit-animation-delay: 0s!important;
+}
+
+// 信封打开
+// 信
+@-webkit-keyframes letter-details_animate {
+  0% {
+    opacity: 1;
+    height: 12vh;
+  }
+
+  100% {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+@keyframes letter-details_animate {
+  0% {
+    opacity: 1;
+    height: 12vh;
+  }
+
+  100% {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+.letter-details__animate{
+  -webkit-animation-name: letter-details_animate;
+  animation-name: letter-details_animate;
+  animation-fill-mode: forwards;
+}
+
+// 信封
+@-webkit-keyframes details_animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(2);
+    transform: translate(-50%, 0) scale(2);
+  }
+
+  100% {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+@keyframes details_animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0) scale(2);
+    transform: translate(-50%, 0) scale(2);
+  }
+
+  100% {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+.details__animate{
+  -webkit-animation-name: details_animate;
+  animation-name: details_animate;
+  animation-fill-mode: forwards;
+}

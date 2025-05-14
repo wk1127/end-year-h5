@@ -1,0 +1,21 @@
+/* global css */
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.animate__animated.animate__slow {
+  -webkit-animation-duration: 1500ms;
+  animation-duration: 1500ms;
+}

@@ -1,0 +1,495 @@
+.container {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 228xx;
+
+  p {
+    margin: 0 0 0 105xx;
+    color: #532B1F;
+    font-size: 30xx;
+    font-weight: 400;
+    line-height: 56xx;
+    transform: translate(0, 100%);
+  }
+
+  .p1 {
+    opacity: 0;
+    animation: pAnimation 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    margin-bottom: 48xx;
+  }
+
+  .p2 {
+    opacity: 0;
+    animation: pAnimation 1s ease 1.2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .p3 {
+    opacity: 0;
+    animation: pAnimation 1s ease 1.7s;
+    animation-fill-mode: forwards;
+  }
+
+  .p4 {
+    opacity: 0;
+    animation: pAnimation 1s ease 2.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .title {
+    color: #F66F27;
+    font-size: 50xx;
+    font-weight: bold;
+    margin: 0 0 0 105xx;
+    opacity: 0;
+    animation: pAnimation 1s ease;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%)
+  }
+
+  .set-out {
+    position: absolute;
+    left: 130px;
+    bottom: 124xx;
+    width: 256xx;
+    height: 80xx;
+    color: #FFFFFF;
+    font-size: 32xx;
+    font-weight: bold;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: setOutShow 2s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .set-out-hide {
+    animation: setOutHide 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .again-dot {
+    position: absolute;
+    right: 13xx;
+    top: calc(50% - 240xx);
+    z-index: 11;
+    color: #FFFFFF;
+    font-size: 32xx;
+    font-weight: bold;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: setOutShow 2s ease;
+    animation-fill-mode: forwards;
+  }
+
+  .to-view {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 166xx);
+    transform: translate(-50%, -50%);
+    width: 256xx;
+    height: 80xx;
+    color: #FFFFFF;
+    font-size: 32xx;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: toViewShow 2s ease 0.5s;
+    // animation: toViewShow 2s ease 6.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .dot {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+      transform: scale(2);
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: warn1 1.2s ease-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .house {
+    position: absolute;
+    left: 0;
+    bottom: 281xx;
+    width: 100%;
+  }
+  .house1 {
+    position: absolute;
+    left: 233xx;
+    bottom: 0;
+    width: 103xx;
+    height: auto;
+  }
+  .house2 {
+    position: absolute;
+    left: 322xx;
+    bottom: 6xx;
+    width: 107xx;
+    height: auto;
+    animation: house2Hide 1s ease 4.5s;
+    animation-fill-mode: forwards;
+  }
+  .house3 {
+    position: absolute;
+    left: 416xx;
+    bottom: 2xx;
+    width: 103xx;
+    height: auto;
+  }
+  .house4 {
+    position: absolute;
+    left: 487xx;
+    bottom: 2xx;
+    width: 153xx;
+    height: auto;
+  }
+  .house5 {
+    position: absolute;
+    right: 11xx;
+    bottom: 3xx;
+    width: 107xx;
+    height: auto;
+    animation: house5Hide 1s ease 4.5s;
+    animation-fill-mode: forwards;
+  }
+  .house6 {
+    position: absolute;
+    left: 225xx;
+    bottom: 0;
+    width: 428xx;
+    height: auto;
+  }
+
+  .virus1 {
+    position: absolute;
+    right: 344xx;
+    bottom: 760xx;
+    width: 64xx;
+    height: auto;
+    animation: virus1Scale 2.5s linear, virus1Move 2s linear 2.5s, virus1Hide 1s linear 4.5s ;
+    animation-fill-mode: forwards;
+  }
+  .virus2 {
+    position: absolute;
+    right: 64xx;
+    bottom: 704xx;
+    width: 64xx;
+    height: auto;
+    opacity: 0;
+    animation: virus2Scale 2s linear 0.5s, virus2Move 2s linear 2.5s, virus2Hide 1s linear 4.5s ;
+    animation-fill-mode: forwards;
+  }
+  .virus3 {
+    position: absolute;
+    bottom: 912xx;
+    right: 208xx;
+    width: 45xx;
+    height: auto;
+    opacity: 0;
+    animation: virus3Scale 1.5s linear 2s, virus3Move 3s linear 3.5s, virus3Hide 1s linear 6.5s ;
+    animation-fill-mode: forwards;
+  }
+  .virus4 {
+    position: absolute;
+    left: 216xx;
+    bottom: 710xx;
+    width: 45xx;
+    height: auto;
+    opacity: 0;
+    animation: virus4Scale 1.5s linear 2.2s, virus4Move 2.5s linear 3.7s, virus4Hide 1s linear 6.2s ;
+    animation-fill-mode: forwards;
+  }
+
+  .train {
+    position: absolute;
+    right: 55vw;
+    bottom: 121xx;
+    width: 4487xx;
+    height: auto;
+    transform: translateX(-800xx);
+    animation: trainEnter 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .train-leave {
+    animation: trainLeave 4s cubic-bezier(.67,.13,.94,.44);
+    animation-fill-mode: forwards;
+  }
+
+  .card {
+    position: absolute;
+    left: 38xx;
+    bottom: -12xx;
+    width: 243xx;
+    height: auto;
+    animation: cardAnimation 0.5s ease 0.5s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 100%);
+  }
+
+
+  @keyframes cardAnimation {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes pAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes virus1Scale {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(20xx, 100xx) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes virus1Move {
+    0% {
+      transform: translate(20xx, 100xx);
+    }
+    100% {
+      transform: translate(32xx, 320xx);
+    }
+  }
+  @keyframes virus1Hide {
+    0% {
+      transform: translate(32xx, 320xx);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(32xx, 340xx);
+      opacity: 0;
+    }
+  }
+
+  @keyframes virus2Scale {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(20xx, 60xx) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes virus2Move {
+    0% {
+      transform: translate(20xx, 60xx);
+    }
+    100% {
+      transform: translate(32xx, 240xx);
+    }
+  }
+  @keyframes virus2Hide {
+    0% {
+      transform: translate(32xx, 240xx);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(32xx, 260xx);
+      opacity: 0;
+    }
+  }
+
+  @keyframes virus3Scale {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(12xx, 60xx) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes virus3Move {
+    0% {
+      transform: translate(12xx, 60xx);
+    }
+    100% {
+      transform: translate(20xx, 320xx);
+    }
+  }
+  @keyframes virus3Hide {
+    0% {
+      transform: translate(20xx, 320xx);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(20xx, 340xx);
+      opacity: 0;
+    }
+  }
+  @keyframes house2Hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes virus4Scale {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(12xx, 60xx) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes virus4Move {
+    0% {
+      transform: translate(12xx, 60xx);
+    }
+    100% {
+      transform: translate(24xx, 300xx);
+    }
+  }
+  @keyframes virus4Hide {
+    0% {
+      transform: translate(24xx, 300xx);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(24xx, 320xx);
+      opacity: 0;
+    }
+  }
+  @keyframes house5Hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes trainEnter {
+    0% {
+      transform: translateX(-800xx);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes trainLeave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translate(2880px);
+    }
+  }
+  @keyframes warn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+  }
+  @keyframes warn1 {
+    0% {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(3.7);
+      opacity: 0.2;
+    }
+  }
+  @keyframes setOutShow {
+    0% {
+      opacity: 0;
+      z-index: 1;
+    }
+    100% {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  @keyframes setOutHide {
+    0% {
+      z-index: 2;
+      opacity: 1;
+    }
+    100% {
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes toViewShow {
+    0% {
+      opacity: 0;
+      z-index: 1;
+    }
+    100% {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+
+}

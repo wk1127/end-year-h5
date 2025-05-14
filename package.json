@@ -1,0 +1,68 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode serve",
+    "build:test": "vue-cli-service build --mode test",
+    "build:prod": "vue-cli-service build --mode product",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "0.19.2",
+    "core-js": "3.6.4",
+    "easy-typer-js": "^2.1.0",
+    "html2canvas": "^1.0.0-rc.4",
+    "js-cookie": "2.2.1",
+    "lib-flexible": "0.3.2",
+    "nprogress": "0.2.0",
+    "qrcodejs2": "0.0.2",
+    "swiper": "^6.4.10",
+    "typed.js": "^2.0.11",
+    "vant": "2.11.2",
+    "vue": "2.6.11",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-router": "3.1.5",
+    "vue-touch": "^2.0.0-beta.4",
+    "vue-typed": "^2.1.4",
+    "vue-typed-js": "^0.1.2",
+    "vuex": "3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.2.0",
+    "@vue/cli-plugin-eslint": "4.2.0",
+    "@vue/cli-plugin-router": "4.2.0",
+    "@vue/cli-plugin-vuex": "4.2.0",
+    "@vue/cli-service": "4.2.0",
+    "babel-eslint": "10.0.3",
+    "eslint": "6.7.2",
+    "eslint-plugin-vue": "6.1.2",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-pxtorem": "4.0.1",
+    "sass-loader": "8.0.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "Android >= 4.0",
+    "iOS >= 7",
+    "last 2 versions"
+  ]
+}

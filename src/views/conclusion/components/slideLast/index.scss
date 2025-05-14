@@ -1,0 +1,81 @@
+.page{
+  color: #000000;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLast/bg.png') no-repeat center;
+  background-size: cover;
+}
+.color-default{
+  color: #B376F3!important;
+}
+// 绝对定位
+.section-img,
+.section-text{
+  position: absolute;
+}
+.section-img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  img {
+    position: absolute;
+    transition: all 8s;
+  }
+  .clock1{
+    top: 9vh;
+    left: 13.7vw;
+    width: 83vw;
+    height: 90.5vh;
+    z-index: 12;
+  }
+  .clock2{
+    top: 4vw;
+    left: -8vw;
+    width: 101.4vw;
+    height: 92.4vh;
+    z-index: 12;
+  }
+  .cloud1{
+    top: -14vh;
+    left: -17vw;
+    width:168.4vw;
+    height: 114.3vh;
+    z-index: 11;
+  }
+  .cloud2{
+    top: -17vh;
+    left: -50vw;
+    width:201.7vw;
+    height: 131.7vh;
+    z-index: 11;
+  }
+  .fish{
+    top: 34vh;
+    right: -5vw;
+    width: 62.6vw;
+    // height: 46.4vh;
+    z-index: 13;
+  }
+}
+// TODO 文字部分跟着这个来
+// 文字
+.section-text{
+  width: 60vw;
+  max-height: 63.65vh;
+  z-index: 30;
+  top: 18vh;
+  left: 7%;
+  text-align: left;
+  line-height: 7.7vw;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideLast/text-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 6% 6.4%;
+  animation-fill-mode: forwards;
+  .text{
+    position: relative;
+    height: 88%;
+    max-height: 50.65vh;
+    overflow: auto;
+    z-index: 32;
+  }
+}

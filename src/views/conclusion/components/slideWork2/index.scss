@@ -1,0 +1,242 @@
+img{
+  width: 100%;
+  display: block;
+}
+.w100{
+  width: 100%;
+}
+.page{
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/bg.png') no-repeat center;
+  // TODO 背景图和人物变形了  需要调下
+  background-size: 100% 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 4vw;
+  color: #000000;
+}
+.color-default{
+  color: #B376F3;
+}
+// 绝对定位
+.section-text,
+.section-clock,
+.section-girl{
+  position: absolute;
+}
+
+// TODO 文字部分跟着这个来
+// 文字
+.section-text{
+  width: 74.67vw;
+  max-height: 59.5vh;
+  z-index: 30;
+  top: 6vh;
+  left: 2.4vw;
+  text-align: left;
+  line-height: 7.7vw;
+  // TODO 背景颜色应该是白色
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/text-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 7% 5% 7% 10%;
+  .text{
+    position: relative;
+    height: 86%;
+    max-height: 50.65vh;
+    overflow: auto;
+    z-index: 32;
+  }
+}
+// 人
+.section-girl{
+  top: 42%;
+  left: 29%;
+  z-index: 20;
+  .girl1{
+    width: 20.4vw;
+    height: 28.3vh;
+  }
+  .girl2{
+    position: absolute;
+    top: -20px;
+    left: -65px;
+    width: 13.33vw;
+    height: 20.69vh;
+  }
+}
+// 钟
+.section-clock{
+  top: 0;
+  right: 10vw;
+  right: 10vw;
+  z-index: 20;
+  background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+  background-size: contain;
+  transition: all .1s;
+  .clock{
+    opacity: 0;
+    width: 12.4vw;
+    max-width: 93px;
+  }
+}
+
+/* 文字 */
+@-webkit-keyframes text_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+@keyframes text_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+.text__animate__zoomIn {
+  -webkit-animation-name: text_zoomIn;
+  animation-name: text_zoomIn;
+}
+
+// 小女孩
+@-webkit-keyframes girl_fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) scale3d(1.15, 1.15, 1.15);
+    transform: translate3d(-100%, 0, 0) scale3d(1.15, 1.15, 1.15);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) scale3d(.8, .8, .8);
+    transform: translate3d(100%, 0, 0) scale3d(.8, .8, .8);
+  }
+}
+@keyframes girl_fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) scale3d(1.15, 1.15, 1.15);
+    transform: translate3d(-100%, 0, 0) scale3d(1.15, 1.15, 1.15);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) scale3d(.8, .8, .8);
+    transform: translate3d(100%, 0, 0) scale3d(.8, .8, .8);
+  }
+}
+.girl_animate__fadeInLeft {
+  -webkit-animation-name: girl_fadeInLeft;
+  animation-name: girl_fadeInLeft;
+}
+
+// 钟
+
+@-webkit-keyframes clock_animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  25% {
+    opacity: 1;
+
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  50% {
+    opacity: 1;
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  100% {
+    opacity: 1;
+
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-1.png') no-repeat top;
+    background-size: contain;
+  }
+}
+@keyframes clock_animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  25% {
+    opacity: 1;
+
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  50% {
+    opacity: 1;
+
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-0.png') no-repeat top;
+    background-size: contain;
+  }
+
+  100% {
+    opacity: 1;
+
+    background: url('https://mats.sudoyu.com/oa/end_of_2020_h5/img/conclusion/slideWork2/clock-1.png') no-repeat top;
+    background-size: contain;
+  }
+}
+.clock_animate {
+  -webkit-animation-name: clock_animate;
+  animation-name: clock_animate;
+}

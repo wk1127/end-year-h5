@@ -1,0 +1,113 @@
+.container {
+  position: relative;
+
+  .box {
+    text-align: left;
+    width: 100vw;
+    height: 2054xx;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    .girl {
+      margin-top: 142xx;
+      margin-left: 358xx;
+      width: 318xx;
+      height: 354xx;
+    }
+    .shadow {
+      width: 497xx;
+      height: 368xx;
+      margin-left: 357xx;
+      margin-top: -148xx;
+    }
+
+    .data-report {
+      position: relative;
+      width: 689xx;
+      height: 1140xx;
+      margin-left: 32xx;
+      margin-top: -132xx;
+      background-size: 100% 100%;
+
+      .report-title {
+        padding-top: 153xx;
+        color: #6D4853;
+        font-size: 50xx;
+        line-height: 50xx;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50xx;
+      }
+      
+      .report-content {
+        color: #434149;
+        font-size: 30xx;
+        line-height: 50xx;
+        padding-left: 134xx;
+        font-weight: 400;
+
+        & p {
+          margin: 0;
+          margin-bottom: 26xx;
+
+          & span {
+            color: #FE9100;
+            font-weight: bold;
+          }
+        }
+      }
+      .save-tip {
+        position: absolute;
+        left: 168xx;
+        bottom: 44xx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6D4853;
+        font-size: 28xx;
+        font-weight: 400;
+
+        .save {
+          width: 60xx;
+          height: 60xx;
+          margin-right: 8xx;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    left: 214xx;
+    bottom: 60xx;
+    text-align: center;
+
+    .fish {
+      width: 125xx;
+      height: 210xx;
+    }
+
+    .bt {
+      position: relative;
+      z-index: 10;
+      box-sizing: border-box;
+      width: 320xx;
+      height: 100xx;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 36xx;
+      font-weight: bold;
+      background-size: 100% 100%;
+      padding-top: 22xx;
+      margin: -90xx auto 0;
+    }
+  }
+
+  .box1 {
+    line-height: 0;
+    img {
+      width: 100%;
+      height: 2054xx;
+    }
+  }
+}

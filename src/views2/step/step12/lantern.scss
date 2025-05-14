@@ -1,0 +1,237 @@
+.self-lantern {
+  position: absolute;
+  left: 286xx;
+  bottom: -60xx;
+  width: 259xx;
+  height: 287xx;
+  background-size: 100% 100%;
+  z-index: 8;
+  animation: selfLanternAnimation 15s ease-out;
+  animation-fill-mode: forwards;
+
+  .name {
+    margin: 61xx 0 10xx 40xx;
+    height: 48xx;
+    line-height: 48xx;
+    width: 165xx;
+    background-color: #E82A10;
+    border-radius: 10xx;
+    color: #FFFFFF;
+    font-size: 30xx;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .number {
+    color: #98220F;
+    font-size: 24xx;
+    font-weight: 400;
+    margin-left: 62xx;
+  }
+}
+
+.lantern {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .name {
+    margin-top: 10%;
+    height: 48xx;
+    line-height: 48xx;
+    // background-color: #E82A10;
+    border-radius: 10xx;
+    color: #FFFFFF;
+    font-size: 30xx;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .number {
+    color: #98220F;
+    font-size: 24xx;
+    font-weight: 400;
+  }
+}
+
+.lantern1 {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  width: 174xx;
+  height: 188xx;
+  background-size: 100% 100%;
+  animation: lantern1Animation 11s linear 0.1s;
+  animation-fill-mode: both;
+}
+
+.lantern2 {
+  position: absolute;
+  left: 374xx;
+  bottom: 76px;
+  width: 151xx;
+  height: 155xx;
+  background-size: 100% 100%;
+  animation: lantern2Animation 11s 1.4s;
+  animation-fill-mode: both;
+}
+
+.lantern3 {
+  position: absolute;
+  left: 20px;
+  bottom: 76px;
+  width: 151xx;
+  height: 155xx;
+  background-size: 100% 100%;
+  animation: lantern3Animation 11s 2.7s;
+  animation-fill-mode: both;
+}
+
+.lantern4 {
+  position: absolute;
+  left: 100px;
+  bottom: 79px;
+  width: 130xx;
+  height: 140xx;
+  background-size: 100% 100%;
+  animation: lantern4Animation 11s 3.9s;
+  animation-fill-mode: both;
+}
+
+.lantern5 {
+  position: absolute;
+  left: 120px;
+  bottom: 76px;
+  width: 130xx;
+  height: 140xx;
+  background-size: 100% 100%;
+  animation: lantern5Animation 11s 4.8s;
+  animation-fill-mode: both;
+}
+
+.lantern6 {
+  position: absolute;
+  left: 220px;
+  bottom: 80px;
+  width: 251xx;
+  height: 255xx;
+  background-size: 100% 100%;
+  animation: lantern6Animation 11s 5.6s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes selfLanternAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: translate(50px, -900px) scale(0.5)
+  }
+}
+
+@keyframes lantern1Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translate(50px, calc(100px - 100vh)) scale(0.5)
+  }
+}
+
+@keyframes lantern2Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: translate(50px, calc(76px - 100vh)) scale(0.5)
+  }
+}
+
+@keyframes lantern3Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translate(50px, calc(76px - 100vh)) scale(0.5)
+  }
+}
+
+@keyframes lantern4Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: translate(50px, calc(76px - 100vh)) scale(0.5)
+  }
+}
+
+@keyframes lantern5Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: translate(50px, calc(76px - 100vh)) scale(0.5)
+  }
+}
+
+@keyframes lantern6Animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(0, -100px) scale(1);
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: translate(50px, calc(76px - 100vh)) scale(0.5)
+  }
+}

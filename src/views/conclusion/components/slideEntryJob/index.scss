@@ -1,0 +1,72 @@
+.page{
+  color: #ffffff;
+}
+// 绝对定位
+.section-after,
+.section-before,
+.section-ball,
+.section-fish,
+.section-text{
+  position: absolute;
+}
+.section-after,
+.section-before{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+// 前背景
+.section-before{
+  z-index: 20;
+}
+// 后背景
+.section-after{
+  z-index: 10;
+}
+// 女孩
+.section-ball{
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  .ball{
+    width: 59vw;
+    max-width: 350px;
+  }
+  .girl{
+    position: relative;
+    width: 26.4vw;
+    max-width: 159px;
+    margin-left: 3.8vw;
+    margin-bottom: -40px;
+    z-index: 31;
+  }
+}
+// 鱼
+.section-fish{
+  z-index: 11;
+  bottom: 31.5vh;
+  right: 0;
+  .fish{
+    position: relative;
+    width: 15.6vw;
+    margin-left: 14.5vw;
+    margin-bottom: -2vh;
+    z-index: 13;
+  }
+  .ball{
+    z-index: 12;
+    width: 41vw;
+    // max-width: 250px;
+  }
+}
+// 文字
+.section-text{
+  z-index: 40;
+  top: 10.65vh;
+  left: 23vw;
+  text-align: left;
+  line-height: 7.7vw;
+  .p1{
+    font-weight: 600;
+  }
+}
